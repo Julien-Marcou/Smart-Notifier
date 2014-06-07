@@ -18,7 +18,7 @@
 	<asset src="www/img/default-icon.png" target="smart-notifier/default-icon.png" />
 
 	<!-- JavaScript Interface -->
-	<js-module src="js/Notifier.js" name="SmartNotifier">
+	<js-module src="www/Notifier.js" name="SmartNotifier">
 		<clobbers target="SmartNotifier" />
 	</js-module>
 
