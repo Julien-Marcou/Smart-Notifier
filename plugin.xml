@@ -5,31 +5,31 @@
 	id="fr.julienmarcou.smartnotifier"
 	version="0.1.0">
 
-	<!-- Informations -->
+	<!-- Information -->
 	<name>Smart Notifier</name>
 	<description>An easy way to push notifications into the notifications area of your smartphone from your app</description>
 	<author href="http://julien-marcou.fr">Julien Marcou</author>
-	<keywords>notification,notifications,notif,notifier,push,easy,fast,smart</keywords>
+	<keywords>notification,notifications,notifier,notif,push</keywords>
 	<license>Apache 2.0</license>
     <repo>https://github.com/Julien-Marcou/Smart-Notifier.git</repo>
     <issue>https://github.com/Julien-Marcou/Smart-Notifier/issues</issue>
 
 	<!-- Assets -->
-	<asset src="img/default-icon.png" target="smart-notifier/default-icon.png" />
+	<asset src="www/img/default-icon.png" target="smart-notifier/default-icon.png" />
 
 	<!-- JavaScript Interface -->
-	<js-module src="js/smart-notifier.js" name="SmartNotifier">
+	<js-module src="js/Notifier.js" name="SmartNotifier">
 		<clobbers target="SmartNotifier" />
 	</js-module>
 
 	<!-- Android Platform -->
 	<platform name="android">
 		<config-file target="res/xml/config.xml" parent="/*">
-			<feature name="Notifier" >
+			<feature name="SmartNotifier" >
 				<param name="android-package" value="fr.julienmarcou.smartnotifier.Notifier"/>
 			</feature>
 		</config-file>
-		<source-file src="android/smart-notifier.java" target-dir="src/fr/julienmarcou/smartnotifier" />
+		<source-file src="android/Notifier.java" target-dir="src/fr/julienmarcou/smartnotifier" />
 	</platform>
 
 </plugin>
