@@ -10,16 +10,16 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import android.support.v4.app.NotificationCompat;
-import android.app.PendingIntent;
+/*import android.support.v4.app.NotificationCompat;
 import android.app.NotificationManager;
-import android.content.Context;
+import android.app.PendingIntent;
+import android.content.Context;*/
 
 public class Notifier extends CordovaPlugin {
 
 	private int currentNotificationId = 1;
 
-	@override
+	@Override
 	public void initialize(CordovaInterface cordova, CordovaWebView webView) {
 		super.initialize(cordova, webView);
 	}
@@ -37,20 +37,23 @@ public class Notifier extends CordovaPlugin {
 
 	private void notify(String title, String message, String icon) {
 		// Notification content
-		NotificationCompat.Builder builder = new NotificationCompat.Builder(this);
-		builder.setTitle(title);
+		/*NotificationCompat.Builder builder = new NotificationCompat.Builder(this.cordova.getActivity().getApplicationContext());
+		builder.setContentTitle(title);
 		builder.setContentText(message);
-		builder.setSmallIcon(R.drawable.notification_icon);
+		builder.setSmallIcon(R.drawable.icon_smartnotifier_default);
 
 		// Notification behavior
 		builder.setContentIntent(PendingIntent.getActivity(
-			this, 0, new Intent(this, ResultActivity.class), PendingIntent.FLAG_ONE_SHOT
+				this.cordova.getActivity().getApplicationContext(),
+				0,
+				this.cordova.getActivity().getIntent(),
+				PendingIntent.FLAG_ONE_SHOT
 		));
 
 		// Notification issue
-		NotificationManager notifier = (NotificationManager) Context.getSystemService(NOTIFICATION_SERVICE);
+		NotificationManager notifier = (NotificationManager) this.cordova.getActivity().getApplicationContext().getSystemService(Context.NOTIFICATION_SERVICE);
 		notifier.notify(currentNotificationId, builder.build());
-		currentNotificationId++;
+		currentNotificationId++;*/
 	}
 
 }

@@ -15,21 +15,26 @@
     <issue>https://github.com/Julien-Marcou/Smart-Notifier/issues</issue>
 
 	<!-- Assets -->
-	<asset src="www/img/default-icon.png" target="smart-notifier/default-icon.png" />
+	<asset src="www/img" target="smart-notifier" />
 
 	<!-- JavaScript Interface -->
-	<js-module src="www/Notifier.js" name="SmartNotifier">
-		<clobbers target="SmartNotifier" />
+	<js-module src="www/Notifier.js" name="Notifier">
+		<clobbers target="Notifier" />
 	</js-module>
 
 	<!-- Android Platform -->
 	<platform name="android">
 		<config-file target="res/xml/config.xml" parent="/*">
-			<feature name="SmartNotifier" >
+			<feature name="Notifier">
 				<param name="android-package" value="fr.julienmarcou.smartnotifier.Notifier"/>
 			</feature>
 		</config-file>
+		<lib-file src="android/libs/android-support-v4.jar" />
 		<source-file src="android/Notifier.java" target-dir="src/fr/julienmarcou/smartnotifier" />
+		<resource-file src="www/img/icon-default.png" target="res/drawable/icon_smartnotifier_default.png" />
+		<resource-file src="www/img/icon-error.png" target="res/drawable/icon_smartnotifier_error.png" />
+		<resource-file src="www/img/icon-success.png" target="res/drawable/icon_smartnotifier_success.png" />
+		<resource-file src="www/img/icon-calendar.png" target="res/drawable/icon_smartnotifier_calendar.png" />
 	</platform>
 
 </plugin>
